@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>КОТЯ и БУСЯ</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-camera"></i> Милашки </h1>
+            <p class="subtitle">Фотогалерея красивых моментов жизни</p>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="container">
+        <!-- Информационный блок -->
+        <section class="intro">
+            <h2>Добро пожаловать в нашу галерею!</h2>
+            <p>Здесь собраны наши лучшие фотографии.</p>
+            <div class="stats">
+                <div class="stat-item">
+                    <i class="fas fa-images"></i>
+                    <span>Я хочу с тобой</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>2024-2026</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-heart"></i>
+                    <span>Любовь</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Галерея фотографий -->
+        <section class="gallery-section">
+            <h2><i class="fas fa-th-large"></i> Галерея фотографий</h2>
+            
+            <!-- Фильтры категорий -->
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">Все фото</button>
+                <button class="filter-btn" data-filter="nature">Природа</button>
+                <button class="filter-btn" data-filter="city">Город</button>
+                <button class="filter-btn" data-filter="portrait">Портреты</button>
+                <button class="filter-btn" data-filter="travel">Путешествия</button>
+            </div>
+
+            <!-- Контейнер для фотографий -->
+            <div class="gallery" id="gallery">
+                <!-- Фото будут добавлены через JavaScript -->
+            </div>
+        </section>
+
+        <!-- Информация об авторе -->
+        <section class="about">
+            <h2><i class="fas fa-user"></i> Об авторе</h2>
+            <div class="author-card">
+                <div class="author-avatar">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="author-info">
+                    <h3>Егорчик и Екатерина</h3>
+                    <p>Авторы и главные лица хита 2313. Знаки судьбы или ошибки молодости, Разный возраст или отсутствие подлинности, Бесконечный флирт или чувство собственности, Нелепые советы подруг или выбор осознанности.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer>
+        <div class="container">
+            <p>© 2026 КОТЯ и БУСЯ. Все права защищены.</p>
+            <p>Сайт создан с <i class="fas fa-heart"></i> для любителей отношений</p>
+        </div>
+    </footer>
+
+    <!-- Модальное окно для просмотра фото -->
+    <div class="modal" id="imageModal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModal">&times;</span>
+            <div class="modal-body">
+                <img id="modalImage" src="" alt="Увеличенное фото">
+                <div class="image-info">
+                    <h3 id="imageTitle"></h3>
+                    <p id="imageDescription"></p>
+                    <div class="image-meta">
+                        <span><i class="fas fa-calendar"></i> <span id="imageDate"></span></span>
+                        <span><i class="fas fa-tag"></i> <span id="imageCategory"></span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-nav">
+                <button id="prevBtn"><i class="fas fa-chevron-left"></i> Назад</button>
+                <button id="nextBtn">Вперед <i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
